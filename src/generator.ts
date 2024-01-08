@@ -21,7 +21,7 @@ export class PluginGenerator {
       return false;
     }
 
-    await this.downloadAndExtractRepo('bretthodgkins', 'aeos-plugin-template', name);
+    await this.downloadAndExtractRepo('Captain-Bacon', 'aeos-plugin-template', name);
     await this.updatePackageJson(fullPath, name, prompt);
     await this.generatePluginFromPrompt(fullPath, name, prompt);
     return true;

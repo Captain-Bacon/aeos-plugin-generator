@@ -82,7 +82,7 @@ export class PluginGenerator {
       ...prompts.PLUGIN_INDEX_PROMPT_MESSAGES,
       {
         role: 'user',
-        content: `Please generate a valid index.ts file for a plugin called ${name} using the following prompt: ${prompt}`,
+        content: `Please generate a valid index.ts file for a plugin called ${name} using the following prompt: ${prompt}. Your response will be written directly 'as is' to the index.ts file. Any comments you have should be as comments in the code, not as plain text. Do not wrap your code in ''' as your reply will be run directly.`,
       },
     ] as ChatCompletionRequestMessage[];
 
